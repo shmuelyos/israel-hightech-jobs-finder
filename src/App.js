@@ -1,7 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
 import {all} from "./db";
-import {Temp} from "./Temp";
 
 
 function App() {
@@ -34,7 +33,8 @@ function App() {
                     api
                 </a>
 
-                <button onClick={()=><Temp/>}>go to html</button>
+                {/*<button onClick={()=><Temp/>}>go to html</button>*/}
+
 
             </header>
 
