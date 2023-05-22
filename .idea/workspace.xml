@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c470936-964b-45c7-a7ce-de2c2f2fbd54" name="Changes" comment="">
+    <list default="true" id="6c470936-964b-45c7-a7ce-de2c2f2fbd54" name="Changes" comment="...">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Functions/extra.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functions/extra.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Functions/getURLS.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Functions/getURLS.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +42,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2021.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -48,7 +52,7 @@
       <recent name="C:\Users\Yossi\WebstormProjects\isreal-hightech-jobs\src\Components" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.coretigo">
+  <component name="RunManager" selected="npm.react">
     <configuration name="All Tests" type="JavaScriptTestRunnerJest" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -66,19 +70,6 @@
       <envs />
       <scope-kind value="SUITE" />
       <test-file value="$PROJECT_DIR$/src/App.test.js" />
-      <test-names>
-        <test-name value="..2" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="..2" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/tests/test.js" />
       <test-names>
         <test-name value="..2" />
       </test-names>
@@ -124,7 +115,7 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="run" type="js.build_tools.npm" nameIsGenerated="true">
+    <configuration name="react" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
@@ -134,22 +125,32 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="run:express" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="run:express" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Jest.All Tests" />
-      <item itemvalue="npm.run" />
-      <item itemvalue="Jest...2" />
       <item itemvalue="Jest...2.findCareerPage" />
       <item itemvalue="Jest...2 (1)" />
       <item itemvalue="Jest...." />
       <item itemvalue="Jest.coretigo" />
+      <item itemvalue="npm.react" />
+      <item itemvalue="npm.run:express" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.run:express" />
         <item itemvalue="Jest.coretigo" />
         <item itemvalue="Jest...." />
         <item itemvalue="Jest...2 (1)" />
         <item itemvalue="Jest...2.findCareerPage" />
-        <item itemvalue="Jest...2" />
       </list>
     </recent_temporary>
   </component>
@@ -166,8 +167,15 @@
       <workItem from="1662898163740" duration="688000" />
       <workItem from="1662991524755" duration="1844000" />
       <workItem from="1684735394968" duration="4414000" />
-      <workItem from="1684748655095" duration="12452000" />
+      <workItem from="1684748655095" duration="21526000" />
     </task>
+    <task id="LOCAL‎00001" summary="...">
+      <created>1684761804883</created>
+      <option name="number" value="LOCAL‎00001" />
+      <option name="presentableId" value="LOCAL‎00001" />
+      <updated>1684761804883</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,5 +192,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="..." />
+    <option name="LAST_COMMIT_MESSAGE" value="..." />
   </component>
 </project>

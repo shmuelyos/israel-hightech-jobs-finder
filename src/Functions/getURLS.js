@@ -1,7 +1,4 @@
 
-// import puppeteer from "puppeteer/lib/cjs/puppeteer/puppeteer";
-
-
 const companies = [
     "intel", "google", "hp", "amdocs", "microsoft", "elbit-systems", "rafael", "ibm", "sap",
     "Israel Aerospace Industries", "Check Point Software Technologies", "ELTA SYSTEMS", "ebay",
@@ -28,29 +25,6 @@ const companies = [
     "EFRANAT", "TransAlgae Israel", "Liola Technologies"
 ];
 
-// export async function getCompanyUrl(company) {
-//     try {
-//         const browser = await puppeteer.launch();
-//         const page = await browser.newPage();
-//         await page.goto(`https://www.google.com/search?q=${company.replace(' ', '+')}`);
-//         const url = await page.$eval('a', (element) => element.href);
-//         await browser.close();
-//         return url ? url.replace('/url?q=', '') : '';
-//     } catch (error) {
-//         console.error(`Error fetching URL for ${company}:`, error.message);
-//         return '';
-//     }
-// }
 
-// export async function scrapeCompanyUrls() {
-//     const companyUrls = {};
-//
-//     for (const company of companies) {
-//         const url = await getCompanyUrl(company);
-//         companyUrls[company] = url;
-//     }
-//
-//     console.log(JSON.stringify(companyUrls, null, 2));
-// }
 
 

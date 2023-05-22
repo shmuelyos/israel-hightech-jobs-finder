@@ -1,8 +1,8 @@
 export function filterByEnglishLetters(strings) {
-    var englishOnly = [];
-    var englishRegex = /^[A-Za-z\s]+$/;  // Regular expression for English letters and spaces
+    let englishOnly = [];
+    let englishRegex = /^[A-Za-z\s]+$/;  // Regular expression for English letters and spaces
 
-    for (var i = 0; i < strings.length; i++) {
+    for (let i = 0; i < strings.length; i++) {
         if (englishRegex.test(strings[i])) {
             englishOnly.push(strings[i]);
         }
@@ -10,3 +10,4 @@ export function filterByEnglishLetters(strings) {
 
     return englishOnly;
 }
+

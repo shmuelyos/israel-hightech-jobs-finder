@@ -1,36 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
 import {all} from "./db";
-import React, {useEffect, useState} from "react";
-import {filterByEnglishLetters} from "./Functions/extra";
+import React from "react";
+// import {filterByEnglishLetters} from "./Functions/extra";
+
 // import {getCompanyUrl, scrapeCompanyUrls} from "./Functions/getURLS";
 
-
+let englishRegex = /^[A-Za-z\s]+$/;
 
 function App() {
-    const companies = filterByEnglishLetters(all.map(company =>company.name_en))
-    console.log(JSON.stringify(companies,null,0))
+    // const companies = filterByEnglishLetters(all.map(company => company.name_en))
+    // console.log("\n\n ~~~~~~~~~~~~~~~~~~~~~ companies ~~~~~~~~~~~~~~~~~~~~~ :", JSON.stringify(companies, null, 4))
 
-    const [url, setUrl] = useState()
-    // const [renderingCompanies, setRenderingCompanies] = useState()
-    //
-    //
-    // useEffect(() => {
-    //     setRenderingCompanies(() =>
-    //         <ol>
-    //             {
-    //                 all.map(i =>
-    //                     <li key={i.id}>
-    //                         {i.name_en}
-    //                     </li>)
-    //             }
-    //         </ol>)
-    //
-    // }, [])
-
-
-    function handleClick(e) {
+    async function handleClick(e) {
         e.preventDefault()
+        await fetch('http://localhost:3009', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({url: `https://www.${e.target.value}.com/`})
+        })
+        // await fetch('http://localhost:3009/')
         // getCompanyUrl(e.target.value).then(setUrl)
     }
 
@@ -60,21 +51,33 @@ function App() {
 
             </header>
 
-            <>
-                <ol>
-                    {
-                        companies.map((i,index) =>
-                            <li key={i.index}>
-                                {i}
+            <ol>
+                {
 
-                                {/*<button onClick={handleClick} value={i.name_en}>*/}
-                                {/*    {i.name_en}*/}
-                                {/*    {url}*/}
-                                {/*</button>*/}
-                            </li>)
-                    }
-                </ol>
-            </>
+                    all.map(({id, name_en}) =>
+                        (englishRegex.test(name_en)) &&
+                        <li key={id}>
+                            {name_en}
+                            <button onClick={handleClick} value={name_en}>
+                                click
+                            </button>
+                        </li>)
+                }
+            </ol>
+
+            {/*<>*/}
+            {/*    <ol>*/}
+            {/*        {*/}
+            {/*            companies.map((i, index) =>*/}
+            {/*                <li key={index}>*/}
+            {/*                    {i}*/}
+            {/*                    <button onClick={handleClick} value={i}>*/}
+            {/*                        click*/}
+            {/*                    </button>*/}
+            {/*                </li>)*/}
+            {/*        }*/}
+            {/*    </ol>*/}
+            {/*</>*/}
 
         </div>
     );

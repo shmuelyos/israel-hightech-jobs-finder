@@ -1,5 +1,4 @@
 import puppeteer from "puppeteer/lib/cjs/puppeteer/puppeteer";
-import EnhancedPage from "./Classes/EnhancedPage";
 import CustomPage from "./Classes/CustomPage";
 
 
