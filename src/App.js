@@ -2,10 +2,15 @@ import logo from './logo.svg';
 import './App.css';
 import {all} from "./db";
 import React, {useEffect, useState} from "react";
-import {getCompanyUrl, scrapeCompanyUrls} from "./Functions/getURLS";
+import {filterByEnglishLetters} from "./Functions/extra";
+// import {getCompanyUrl, scrapeCompanyUrls} from "./Functions/getURLS";
+
 
 
 function App() {
+    const companies = filterByEnglishLetters(all.map(company =>company.name_en))
+    console.log(JSON.stringify(companies,null,0))
+
     const [url, setUrl] = useState()
     // const [renderingCompanies, setRenderingCompanies] = useState()
     //
@@ -26,7 +31,7 @@ function App() {
 
     function handleClick(e) {
         e.preventDefault()
-        getCompanyUrl(e.target.value).then(setUrl)
+        // getCompanyUrl(e.target.value).then(setUrl)
     }
 
     return (
@@ -58,12 +63,14 @@ function App() {
             <>
                 <ol>
                     {
-                        all.map(i =>
-                            <li key={i.id}>
-                                <button onClick={handleClick} value={i.name_en}>
-                                    {i.name_en}
-                                    {url}
-                                </button>
+                        companies.map((i,index) =>
+                            <li key={i.index}>
+                                {i}
+
+                                {/*<button onClick={handleClick} value={i.name_en}>*/}
+                                {/*    {i.name_en}*/}
+                                {/*    {url}*/}
+                                {/*</button>*/}
                             </li>)
                     }
                 </ol>

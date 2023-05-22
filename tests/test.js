@@ -69,7 +69,6 @@ describe('...', () => {
         companiesList = document.querySelectorAll("#__next > div > div.companies__container.container > div.row.justify-content-center >div")
     }, 60 * 1000)
 
-
     test("companies - click on each", async () => {
 
         await page.click(companiesList[0])
@@ -87,6 +86,7 @@ describe('...', () => {
 
 
 })
+
 
 
 
