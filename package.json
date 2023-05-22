@@ -6,6 +6,8 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.4.0",
+    "cheerio": "^1.0.0-rc.12",
     "jest": "^27.5.1",
     "jest-puppeteer": "^6.1.1",
     "puppeteer": "^17.1.3",
